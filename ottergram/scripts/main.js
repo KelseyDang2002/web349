@@ -33,6 +33,7 @@ function setDetailsFromThumb(thumbnail) {
 function addThumbClickHandler(thumb) {
     'use strict';
     thumb.addEventListener('click', function (event) {
+        console.log('clicked');
         event.preventDefault();
         setDetailsFromThumb(thumb);
         showDetails();
