@@ -120,11 +120,13 @@ a {
 
     text-align: center;
     font-family: lakeshore;
+    font-size: 14px;
     background: rgb(96, 125, 139);
     color: rgb(202, 238, 255);
 }
 
 .prev-button:hover {
+    cursor: pointer;
     transform: scale(1.2);
     background: rgb(64, 80, 96);
     color: white;
@@ -145,11 +147,13 @@ a {
 
     text-align: center;
     font-family: lakeshore;
+    font-size: 14px;
     background: rgb(96, 125, 139);
     color: rgb(202, 238, 255);
 }
 
 .next-button:hover {
+    cursor: pointer;
     transform: scale(1.2);
     background: rgb(64, 80, 96);
     color: white;

@@ -80,4 +80,12 @@ function initializeEvents() {
     addKeyPressHandler();
 }
 
+function prevButton() {
+    'use strict';
+}
+
+function nextButton() {
+    'use strict';
+}
+
 initializeEvents();
