@@ -105,40 +105,13 @@ a {
     align-items: center;
 }
 
-.prev-button {
-    display: inline-block;
-    border: none;
-    border-radius: 3px;
-    margin: 8px 8px;
-    padding: 32px 8px;
-    justify-content: left;
-    align-items: center;
-
-    text-align: center;
-    font-family: lakeshore;
-    font-size: 14px;
-    background: rgb(96, 125, 139);
-    color: rgb(202, 238, 255);
-}
-
-.prev-button:hover {
-    cursor: pointer;
-    transform: scale(1.2);
-    background: rgb(64, 80, 96);
-    color: white;
-}
-
-.prev-button:active {
-    transform: scale(1);
-}
-
-.next-button {
+.button {
     display: block;
     border: none;
     border-radius: 3px;
     margin: 8px 8px;
     padding: 32px 8px;
-    justify-content: right;
+    justify-content: center;
     align-items: center;
 
     text-align: center;
@@ -148,14 +121,14 @@ a {
     color: rgb(202, 238, 255);
 }
 
-.next-button:hover {
+.button:hover {
     cursor: pointer;
     transform: scale(1.2);
     background: rgb(64, 80, 96);
     color: white;
 }
 
-.next-button:active {
+.button:active {
     transform: scale(1);
 }
 
@@ -163,7 +136,7 @@ a {
     position: relative;
     text-align: center;
 
-    transition: transform 200ms cubic-bezier(1, .06, .51, .99);
+    transition: transform 333ms cubic-bezier(1, .06, .51, .99);
 }
 
 .is-tiny {

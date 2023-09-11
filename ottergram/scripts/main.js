@@ -2,6 +2,7 @@ var DETAIL_IMAGE_SELECTOR = '[data-image-role="target"]';
 var DETAIL_TITLE_SELECTOR = '[data-image-role="title"]';
 var DETAIL_FRAME_SELECTOR = '[data-image-role="frame"]';
 var THUMBNAIL_LINK_SELECTOR = '[data-image-role="trigger"]';
+var INDEX_SELECTOR = '[data-index]';
 var HIDDEN_DETAIL_CLASS = 'hidden-detail';
 var TINY_EFFECT_CLASS = 'is-tiny';
 var ESC_KEY = 27;
@@ -81,14 +82,33 @@ function initializeEvents() {
     addKeyPressHandler();
 }
 
+function array() {
+    var array = getThumbnailsArray();
+    array.forEach((item, index) => {
+        if (item === array) {
+            i = index;
+        }
+    });
+}
+
 function prevButton() {
     'use strict';
     console.log('prev');
+    if (i > array.length) {
+        i = array[i];
+        i--;
+    }
+    return showDetails(array[i]);
 }
 
 function nextButton() {
     'use strict';
     console.log('next');
+    if (i <= array.length - 1) {
+        i = array[i];
+        i++;
+    }
+    return showDetails(array[i]);
 }
 
 initializeEvents();
