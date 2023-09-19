@@ -29,22 +29,22 @@
     Truck.runTests = function() {
         var App = window.App;
         var Truck = App.Truck;
-        var DataStore = App.Datastore;
-        var enterprise = new Truck('ncc1705', new DataStore());
+        var DataStore = App.DataStore;
+        var myTruck= new Truck('ncc1705', new DataStore());
 
         console.log('---------- running Truck tests ----------')
-        enterprise.createOrder({ emailAddress: 'ryker@starfleet.com', order: 'caramel macciato' });
-        enterprise.createOrder({ emailAddress: 'laforge@starfleet.com', order: 'boba' });
-        enterprise.createOrder({ emailAddress: 'data@starfleet.com', order: 'water' });
-        enterprise.createOrder({ emailAddress: 'picard@starfleet.com', order: 'earl grey hot' });
-        enterprise.createOrder({ emailAddress: 'crusher@starfleet.com', order: 'coca-cola' });
-        enterprise.createOrder({ emailAddress: 'worf@starfleet.com', order: 'triple espresso' });
-        enterprise.printOrders();
+        myTruck.createOrder({ emailAddress: 'ryker@starfleet.com', order: 'caramel macciato' });
+        myTruck.createOrder({ emailAddress: 'laforge@starfleet.com', order: 'boba' });
+        myTruck.createOrder({ emailAddress: 'data@starfleet.com', order: 'water' });
+        myTruck.createOrder({ emailAddress: 'picard@starfleet.com', order: 'earl grey hot' });
+        myTruck.createOrder({ emailAddress: 'crusher@starfleet.com', order: 'coca-cola' });
+        myTruck.createOrder({ emailAddress: 'worf@starfleet.com', order: 'triple espresso' });
+        myTruck.printOrders();
 
-        enterprise.deliverOrder('laforge@starfleet.com');
-        enterprise.deliverOrder('crusher@starfleet.com');
-        enterprise.deliverOrder('worf@starfleet.com');
-        enterprise.printOrders();
+        myTruck.deliverOrder('laforge@starfleet.com');
+        myTruck.deliverOrder('crusher@starfleet.com');
+        myTruck.deliverOrder('worf@starfleet.com');
+        myTruck.printOrders();
 
         console.log('---------- finished Truck tests ----------')
     };
