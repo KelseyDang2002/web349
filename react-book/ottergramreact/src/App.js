@@ -1,53 +1,32 @@
 import './App.css';
+import Header from './components/Header';
+import Post from './components/Post';
 import Barry from './otters/otter1.jpg';
 import Robin from './otters/otter2.jpg';
 import Maurice from './otters/otter3.jpg';
 import Lesley from './otters/otter4.jpg';
 import Barbara from './otters/otter5.jpg';
 
+const ottersArray = [
+  {image: Barry, name: 'Barry', id: 1},
+  {image: Robin, name: 'Robin', id: 2},
+  {image: Maurice, name: 'Maurice', id: 3},
+  {image: Lesley, name: 'Lesley', id: 4},
+  {image: Barbara, name: 'Barbara', id: 5},
+];
+
 function App() {
   return (
     <div>
-      <header className='header-component'>
-        <h1>Ottergram</h1>
-        <h2>Instagram for Otters I Guess</h2>
-      </header>
+      <Header/>
       <ul className='post-list'>
-        <li className='post-component'>
-          <button>
-            <img src={Barry} alt='Barry'/>
-            <p>Barry</p>
-          </button>
-        </li>
-        
-        <li className='post-component'>
-          <button>
-            <img src={Robin} alt='Robin'/>
-            <p>Robin</p>
-          </button>
-        </li>
-
-        <li className='post-component'>
-          <button>
-            <img src={Maurice} alt='Maurice'/>
-            <p>Maurice</p>
-          </button>
-        </li>
-
-        <li className='post-component'>
-          <button>
-            <img src={Lesley} alt='Lesley'/>
-            <p>Lesley</p>
-          </button>
-        </li>
-
-        <li className='post-component'>
-          <button>
-            <img src={Barbara} alt='Barbara'/>
-            <p>Barbara</p>
-          </button>
-        </li>
-
+        {ottersArray.map((post) => (
+          <Post
+            key={post.id}
+            image={post.image}
+            name={post.name}
+          />
+        ))}
       </ul>
     </div>
   );
