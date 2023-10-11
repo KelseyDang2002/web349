@@ -1,6 +1,10 @@
+import {useState} from 'react';
 import './App.css';
 import Header from './components/Header';
+import Footer from './components/Footer';
 import Post from './components/Post';
+import SelectedItem from './components/SelectedItem';
+
 import Barry from './otters/otter1.jpg';
 import Robin from './otters/otter2.jpg';
 import Maurice from './otters/otter3.jpg';
@@ -16,18 +20,29 @@ const ottersArray = [
 ];
 
 function App() {
+  const [selectedPostName, setSelectedPostName] = useState('Barry');
+  const selectedPost = ottersArray.find(otter => otter.name === selectedPostName);
+
   return (
     <div>
       <Header/>
-      <ul className='post-list'>
-        {ottersArray.map((post) => (
-          <Post
-            key={post.id}
-            image={post.image}
-            name={post.name}
-          />
-        ))}
-      </ul>
+      <div className='app-content'>
+        <ul className='post-list'>
+          {ottersArray.map((post) => (
+            <Post
+              key={post.id}
+              image={post.image}
+              name={post.name}
+              setSelectedPostName={setSelectedPostName}
+            />
+          ))}
+        </ul>
+        <SelectedItem
+          image={selectedPost.image}
+          name={selectedPost.name}
+        />
+      </div>
+      <Footer/>
     </div>
   );
 }

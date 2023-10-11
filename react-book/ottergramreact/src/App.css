@@ -20,6 +20,14 @@ body {
     width: 100%;
 }
 
+.footer-component h1 {
+    background: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1em;
+    width: 100%;
+}
+
 .post-list {
     padding: 0 10px;
     margin: 0;
